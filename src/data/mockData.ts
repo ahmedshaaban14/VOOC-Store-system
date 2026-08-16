@@ -1,0 +1,152 @@
+import { Product, Category, DashboardSummary } from '../shared/types';
+
+export const mockCategories: Category[] = [
+  { id: 1, name: 'قمصان رجالي', description: 'قمصان رسمية وكاجوال', createdAt: '2026-01-10' },
+  { id: 2, name: 'بنطال جينز', description: 'تشكيلة جينز رجالي وحريمي', createdAt: '2026-01-10' },
+  { id: 3, name: 'فساتين', description: 'فساتين سهرة وكاجوال', createdAt: '2026-01-10' },
+  { id: 4, name: 'جاكيتات ومعاطف', description: 'معاطف شتوية وجاكيتات جلد', createdAt: '2026-01-10' },
+  { id: 5, name: 'ملابس رياضية', description: 'ترنجات وتيشيرتات رياضية', createdAt: '2026-01-10' },
+  { id: 6, name: 'أحذية', description: 'أحذية كلاسيك ورياضية', createdAt: '2026-01-10' },
+  { id: 7, name: 'إكسسوارات', description: 'أحزمة، أحزمة، كابات', createdAt: '2026-01-10' },
+];
+
+export const mockProducts: Product[] = [
+  {
+    id: 1,
+    barcode: '629110001001',
+    name: 'قميص قطن كلاسيك أبيض',
+    image: 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400&auto=format&fit=crop&q=80',
+    categoryId: 1,
+    purchasePrice: 250,
+    salePrice: 420,
+    currentStock: 28,
+    minStockLevel: 5,
+    createdAt: '2026-02-01T10:00:00Z',
+    updatedAt: '2026-02-01T10:00:00Z',
+  },
+  {
+    id: 2,
+    barcode: '629110001002',
+    name: 'بنطال جينز أزرق داكن',
+    image: 'https://images.unsplash.com/photo-1542272604-780c96856592?w=400&auto=format&fit=crop&q=80',
+    categoryId: 2,
+    purchasePrice: 320,
+    salePrice: 550,
+    currentStock: 15,
+    minStockLevel: 5,
+    createdAt: '2026-02-01T10:30:00Z',
+    updatedAt: '2026-02-01T10:30:00Z',
+  },
+  {
+    id: 3,
+    barcode: '629110001003',
+    name: 'فستان سهرة كلاسيكي أسود',
+    image: 'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=400&auto=format&fit=crop&q=80',
+    categoryId: 3,
+    purchasePrice: 650,
+    salePrice: 1100,
+    currentStock: 4, // Low stock!
+    minStockLevel: 5,
+    createdAt: '2026-02-02T11:00:00Z',
+    updatedAt: '2026-02-02T11:00:00Z',
+  },
+  {
+    id: 4,
+    barcode: '629110001004',
+    name: 'جاكيت جلد طبيعي بني',
+    image: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&auto=format&fit=crop&q=80',
+    categoryId: 4,
+    purchasePrice: 1200,
+    salePrice: 1950,
+    currentStock: 8,
+    minStockLevel: 3,
+    createdAt: '2026-02-03T12:00:00Z',
+    updatedAt: '2026-02-03T12:00:00Z',
+  },
+  {
+    id: 5,
+    barcode: '629110001005',
+    name: 'تيشيرت بولو كاجوال رمادي',
+    image: 'https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=400&auto=format&fit=crop&q=80',
+    categoryId: 1,
+    purchasePrice: 150,
+    salePrice: 280,
+    currentStock: 42,
+    minStockLevel: 10,
+    createdAt: '2026-02-04T09:15:00Z',
+    updatedAt: '2026-02-04T09:15:00Z',
+  },
+  {
+    id: 6,
+    barcode: '629110001006',
+    name: 'حذاء رياضي سفري أبيض',
+    image: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&auto=format&fit=crop&q=80',
+    categoryId: 6,
+    purchasePrice: 400,
+    salePrice: 680,
+    currentStock: 2, // Low stock!
+    minStockLevel: 5,
+    createdAt: '2026-02-05T14:20:00Z',
+    updatedAt: '2026-02-05T14:20:00Z',
+  },
+  {
+    id: 7,
+    barcode: '629110001007',
+    name: 'ترنج رياضي كامل أسود',
+    image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&auto=format&fit=crop&q=80',
+    categoryId: 5,
+    purchasePrice: 480,
+    salePrice: 820,
+    currentStock: 19,
+    minStockLevel: 5,
+    createdAt: '2026-02-06T16:00:00Z',
+    updatedAt: '2026-02-06T16:00:00Z',
+  },
+  {
+    id: 8,
+    barcode: '629110001008',
+    name: 'حزام جلد طبيعي أسود',
+    image: 'https://images.unsplash.com/photo-1624222247344-550fb60583dc?w=400&auto=format&fit=crop&q=80',
+    categoryId: 7,
+    purchasePrice: 90,
+    salePrice: 175,
+    currentStock: 35,
+    minStockLevel: 8,
+    createdAt: '2026-02-07T11:45:00Z',
+    updatedAt: '2026-02-07T11:45:00Z',
+  },
+];
+
+export const mockDashboardSummary: DashboardSummary = {
+  todaySales: 8450,
+  todayPurchases: 2300,
+  todayProfit: 3150,
+  currentInventoryValue: 142800,
+  totalProductsCount: 156,
+  lowStockProductsCount: 5,
+};
+
+export const mockSalesOverTime = [
+  { day: 'السبت', sales: 4200, purchases: 1200 },
+  { day: 'الأحد', sales: 5800, purchases: 2100 },
+  { day: 'الإثنين', sales: 6400, purchases: 1500 },
+  { day: 'الثلاثاء', sales: 4900, purchases: 900 },
+  { day: 'الأربعاء', sales: 7200, purchases: 3200 },
+  { day: 'الخميس', sales: 9800, purchases: 4500 },
+  { day: 'الجمعة', sales: 11500, purchases: 2800 },
+];
+
+export const mockTopSellingProducts = [
+  { name: 'قميص قطن كلاسيك أبيض', salesCount: 64, totalRevenue: 26880 },
+  { name: 'بنطال جينز أزرق داكن', salesCount: 48, totalRevenue: 26400 },
+  { name: 'تيشيرت بولو كاجوال', salesCount: 42, totalRevenue: 11760 },
+  { name: 'حذاء رياضي سفري', salesCount: 31, totalRevenue: 21080 },
+  { name: 'جاكيت جلد طبيعي', salesCount: 18, totalRevenue: 35100 },
+];
+
+export const mockCashMovement = [
+  { type: 'مبيعات نقدية', amount: 8450, color: '#22c55e' },
+  { type: 'مقبوضات عملاء', amount: 1200, color: '#3b82f6' },
+  { type: 'مشتريات مورّدين', amount: 2300, color: '#ef4444' },
+  { type: 'مصروفات تشغيلية', amount: 950, color: '#f59e0b' },
+];
